@@ -1,0 +1,108 @@
+body {
+	background: #FFFFFF none repeat scroll 0 0;
+	font-family: Tahoma,Calibri,Verdana,Geneva,sans-serif;
+	font-size: 0.9em;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+h2 {
+	text-align: left;
+}
+p {
+	text-align: justify;
+}
+
+form label {
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	width: 7%;
+}
+form label.for-select {
+	vertical-align: middle;
+}
+form textarea, form .roll-results {
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: 90%;
+	width: 90%;
+}
+form textarea#rolls {
+	width: 44.5%;
+	height: 13em;
+}
+form .roll-results {
+	border: thin solid #BBB;
+	display: inline-block;
+	width: 45%;
+	height: 13em;
+	text-align: left;
+	vertical-align: top;
+	color: #999;
+}
+form #submit {
+	font-size: 1em;
+	margin-top: 10px;
+}
+form .output {
+	margin-top: 1em;
+}
+
+.leftpanel {
+	display: inline-block;
+	float: left;
+	padding-right: 1em;
+	text-align: left;
+	width: 25%;
+}
+.rightpanel {
+	display: inline-block;
+	width: 70%;
+}
+
+.leftpanel ol {
+	text-align: justify;
+	padding-left: 1.3em;
+}
+
+.example {
+	text-align: left;
+}
+.example div {
+	display: inline-block;
+	font-family: monospace;
+	font-size: 0.9em;
+	min-height: 7em;
+	margin: 0.5em 0.2em;
+	padding: 0.6em;
+	text-align: left;
+	vertical-align: top;
+}
+.example .input1 {
+	width: 10%;
+}
+.example .input2 {
+	width: 32%;
+}
+.example .good {
+	border: thin dashed green;
+}
+.example .output {
+	width: 42%;
+}
+.example .spacer {
+	display: inline-block;
+	margin-top: 3em;
+	text-align: center;
+	width: 3%;
+}
+
+#javascriptnotice {
+	border: medium dashed red;
+	color: red;
+	font-weight: bold;
+	padding: 1em;
+	margin: 1em;
+}

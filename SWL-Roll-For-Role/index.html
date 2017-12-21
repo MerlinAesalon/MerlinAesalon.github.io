@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>SWL Roll For Role</title>
+
+		<link rel="stylesheet" href="./css/main.css" type="text/css" />
+	</head>
+	<body>
+		<a href="https://github.com/MerlinAesalon/SWL-Roll-For-Role"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+		<div id="header">
+			<h1>SWL Roll For Role</h1>
+		</div>
+
+		<div id="javascriptnotice">
+			This page requires Javascript. You're seeing this message as you have
+			Javascript disabled.
+		</div>
+
+		<div class="leftpanel">
+			<h2>About</h2>
+			<p>This is a silly web interface to assign random roles for the videogame
+				<a href="https://www.secretworldlegends.com/">Secret World Legends</a>
+				(SWL), a MMORPG by <a href="http://www.funcom.com/">Funcom</a>.
+			</p>
+            
+            <p>Updated for SWL based on the 
+				<a href="https://github.com/AliceOrwell/TSW-Roll-For-Role">TSW Roll for Role tool by AliceOrwell</a>.
+			</p>
+
+			<h2>Instructions</h2>
+			<ol>
+				<li>Populate the Roles section by selecting a preset from the Presets
+					dropdown.</li>
+				<li>Copy &amp; paste your rolls from your SWL chat window into the
+					lefthand Rolls box.</li>
+				<li>Verify rolls were processed correctly by examining the sorted roll
+					results in the righthand Rolls window.</li>
+				<li>Your roll assignments will now have appeared in the Output box.</li>
+			</ol>
+
+			<h2>Notes</h2>
+			<p>If none of the presets are suitable for your needs you choose to edit
+				an existing one or start from scratch using the Custom preset. When you
+				have decided on what roles you want you will need to manually trigger
+				your roll assignments by clicking the Process button.
+			</p>
+		</div>
+		<div class="rightpanel">
+			<form action="#">
+				<div>
+					<label for="role-presets" class="for-select">Presets:</label>
+					<select name="role-presets" id="role-presets"></select>
+				</div>
+				<div>
+					<label for="roles">Roles:</label>
+					<textarea name="roles" id="roles" rows="10" cols="70"></textarea>
+				</div>
+				<div>
+					<label for="rolls">Rolls:</label>
+					<textarea name="rolls" id="rolls" rows="10" cols="35"></textarea>
+					<div class="roll-results">&nbsp;</div>
+				</div>
+				<input type="submit" id="submit" value="Process" />
+				<div class="output">
+					<label for="output">Output:</label>
+					<textarea name="output" id="output" rows="7" cols="70"></textarea>
+				</div>
+			</form>
+
+			<h2>Examples</h2>
+			<div class="example">
+				<div class="input input1 good">
+					Tank (Bird)<br />
+					Tank (Hulk)<br />
+					Suffusion (Main)<br />
+					Suffusion (Filth)<br />
+					Support DPS (Mid)<br />
+					Support DPS (Melee)<br />
+					DPS<br />
+					DPS<br />
+					DPS<br />
+					DPS
+				</div>
+				<div class="input input2 good">
+					Smyrill rolled a 12.<br />
+					DarkMojo rolled a 92.<br />
+					blueplane rolled a 29.<br />
+					FluffyRevits rolled a 32.<br />
+					Nesrali rolled a 67.<br />
+					cloudsalot rolled a 45.<br />
+					Catlin rolled a 99.<br />
+					MerryBerry rolled a 2.<br />
+					disso rolled a 50.<br />
+					BlackCat rolled a 3.
+				</div>
+				<span class="spacer">&gt;</span>
+				<div class="output good">
+					10 Roles, 10 People :: Tank (Bird): Catlin -- Tank (Hulk): DarkMojo --
+					Suffusion (Main): Nesrali -- Suffusion (Filth): disso -- Support DPS (Mid): cloudsalot -- Support DPS (Melee): FluffyRevits
+					-- DPS: blueplane -- DPS: Smyrill -- DPS: BlackCat -- DPS: MerryBerry
+				</div>
+			</div>
+			<div class="example">
+				<div class="input input1 good">
+					Tank<br />
+					Support DPS<br />
+					DPS<br />
+					DPS<br />
+					DPS<br />
+					<br /><br />
+				</div>
+				<div class="input input2 good">
+					Rhaisteld rolled a 40.<br />
+					Luxian rolled a 52.<br />
+					Drenneth rolled a 14.<br />
+					Gewber rolled a 22.<br />
+					ougk rolled a 88.<br />
+					Kuraikaze rolled a 5.<br />
+					BigMiz rolled a 1.
+				</div>
+				<span class="spacer">&gt;</span>
+				<div class="output good">
+					5 Roles, 7 People :: Tank: ougk -- Support DPS: Luxian --
+					DPS: Rhaisteld -- DPS: Gewber -- DPS: Drenneth
+				</div>
+			</div>
+			<div class="example">
+				<div class="input input1 good">
+					Tank<br />
+					Support DPS<br />
+					DPS<br />
+					DPS<br />
+					DPS<br />
+					<br /><br />
+				</div>
+				<div class="input input2 good">
+					Samiira rolled a 97.<br />
+				</div>
+				<span class="spacer">&gt;</span>
+				<div class="output good">
+					5 Roles, 1 Person :: Tank: Samiira -- Support DPS: UNASSIGNED --
+					DPS: UNASSIGNED -- DPS: UNASSIGNED -- DPS: UNASSIGNED
+				</div>
+			</div>
+		</div>
+
+		<script language="javascript" type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+		<script language="javascript" type="text/javascript" src="./js/swlrollsorter.js"></script>
+		<script language="javascript" type="text/javascript" src="./src/swlrollforrole.js"></script>
+		<script language="javascript" type="text/javascript" src="./src/main.js"></script>
+	</body>
+</html>
